@@ -1,0 +1,376 @@
+
+深度学习 公开课
+http://blog.csdn.net/xiangz_csdn/article/details/54580053
+
+
+机器学习公开课
+最值得看的十大机器学习公开课
+
+
+在当下的机器学习热潮，人才匮乏十分显著。截至目前，国内开设人工智能（AI）专业的高校不多，相当多的开发者是跨界入门，需要自学大量知识并摸索。因而优质的学习资源至关重要。因此，雷锋网(公众号：雷锋网)搜集了全世界范围内最受欢迎的机器学习课程，整理成这份“机器学习十大入门公开课”盘点，集中呈现给各位。这份推荐榜颇费心血，综合考虑了难易、侧重点、时效性等诸多因素，希望能帮助大家找到最适合自己的学习资源。
+
+这些课程全部免费开放，但有些需翻墙，有的缺少中文字幕。
+
+1. 吴恩达“机器学习”公开课
+
+开发者入门必读：最值得看的十大机器学习公开课
+
+课程名称：机器学习 Machine Learning
+
+主讲人：吴恩达 Andrew Ng
+
+授课机构：斯坦福大学
+
+发布平台：Coursera
+
+语言：英语，汉语字幕
+
+网址：https://www.coursera.org/learn/machine-learning
+
+无论国内国外，这是最火的机器学习入门课程，没有之一。无数新手都是通过这门课对机器学习初窥门径。吴恩达老师用极其清楚直白的语言，对机器学习的几种主要算法做了初步介绍。
+
+这门课最大的特点，是它侧重于概念理解而不是数学。数学推导过程基本被略过，重点放在让初学者理解这背后的思路。另外，它还十分重视联系实际和经验总结：1. 课程中吴恩达老师列举了许多算法实际应用的例子 2. 他提到当年他们入门 AI 时面临的许多问题，以及处理这些难题的经验。
+
+课程中代码教程使用的是 Octave/MATLAB，因此不需要会 Python、C 语言，适合没有编程基础的新手。
+
+总结起来，这门课对数学、统计、IT 基础薄弱的童鞋十分友好。其实很多机器学习入门课，都是假定学生已修完这一门，于是重点对其进行补充——讲解这门课程中吴恩达老师未涉及、或是涉及不深的话题。因此，对于机器学习 “一张白纸”的童鞋，雷锋网强烈推荐从这门课起步，然后选择其他入门课程进阶，以在脑海中建立起更全面的知识体系。另外，Coursera 上这门课的论坛十分活跃，不管抛出什么问题都会有人解答，算是一个额外的好处。
+
+彩蛋：网易公开课上有吴恩达老师在斯坦福授课的实录视频。内容比较深入，但时间比较久了，可作为进阶姊妹篇。地址：http://open.163.com/special/opencourse/machinelearning.html
+
+2. 加州理工 “从数据中学习”
+
+开发者入门必读：最值得看的十大机器学习公开课
+
+课程名称：Learning from Data，网易公开课译名为“加州理工学院公开课：机器学习与数据挖掘”
+
+主讲人：Yaser Abu-Mostafa
+
+授课机构：加州理工学院
+
+发布平台：edX（原版），网易公开课
+
+语言：英语，网易有汉语字幕
+
+网址： https://www.edx.org/course/caltechx/caltechx-cs1156x-learning-data-2516，edX；
+
+http://open.163.com/special/opencourse/learningfromdata.html，网易。
+
+这同样是一门机器学习的入门课，但并不简单。该课程强调数据，是因为机器学习与各领域的大数据处理应用（比如金融、医疗）联系十分紧密。这门课内容涵盖基础理论、算法和应用，平衡了理论与实践，既覆盖数学统计，也包含启发式的概念理解。
+
+课程结构是这样的：
+
+什么是学习？
+
+机器能学习吗？
+
+怎么做到？
+
+怎么做好？
+
+经验教训。
+
+不少人评论该课程结构就像讲故事，它有助于学习者形成对机器学习概念和模型深度、直觉性的理解。学习者公认它内容非常充实，但对作业模块的争议很大：有人认为难度偏高并且缺乏反馈，有人认为它是网上能找到的、最好的机器学习练习。
+
+彩蛋：Yaser Abu-Mostafa 出版了同名著作 《Learning From Data》，可作为该课程的教材和补充。
+
+3. Tom Mitchell 机器学习课程
+
+开发者入门必读：最值得看的十大机器学习公开课
+
+课程名称：机器学习 Machine Learning
+
+主讲人：Tom Mitchell
+
+授课机构：卡内基梅隆大学（CMU）
+
+发布平台：CMU 官网
+
+语言：英语
+
+网址：http://www.cs.cmu.edu/~tom/10701_sp11/
+
+这门课是学界人士的最爱，是入门课程之中较全面、高阶的一门。课时为 15 周，远超大多数机器学习慕课。其覆盖的话题非常广，按先后次序包括：代数和概率论，机器学习的基础工具，概率图模型，AI，神经网络，主动学习，增强学习。课程内容和练习十分简洁明白，概念解释清楚到位。
+
+Tom Mitchell 是 AI 领域德高望重的老牌宗师，他的《Machine Learning》 （中文版为《计算机科学丛书:机器学习》），是最经典的机器学习教科书之一。但因为时间久远，涉及的一些概念与今天的开发者并没有太大关联，更适合需要了解人工智能来龙去脉的大学师生。这门课程与之类似，能帮助学习者理清机器学习的发展脉络。它适合计划进行系统性学习、投入大量时间的人。
+
+对于初学者，建议至少听完吴恩达的机器学习课程之后，再修这一门。
+
+4. 台大林轩田老师的机器学习基石
+
+开发者入门必读：最值得看的十大机器学习公开课
+
+课程名称：机器学习基石
+
+主讲人：林轩田
+
+授课机构：台湾大学
+
+发布平台：Coursera
+
+语言：汉语
+
+这是为汉语学子量身定做的入门课，相当于台湾大学机器学习课程前半学期的课，教给大家的是机器学习最核心的知识。林老师是教科书《Learning From Data》 的作者之一，是华人机器学习领域年轻有为的青年学者。这门课程十分用心细致，内容比吴恩达老师的入门课程稍稍充实一些。
+
+林老师表示，针对顶级机器学习公开课全是英语授课的现状，不少学生反映英语教学有不易吸收之处。因此，借推出这门课程，希望帮助汉语为母语的学生减少入门难度。
+
+针对如何让学生接受枯燥的算法，林老师说道：
+
+“我们的课程设计中，大家会看到我们把对算法与数学式的推导，以‘解决问题’的过程方式呈现。也就是说，我们对算法的介绍是环绕着‘为什么’出发的，当同学们脑中有‘为什么’的时候，就有目标去理解这些算法与数学式的内容了。”
+
+《Learning From Data》 也可作为这门课的教科书。学习 Yaser Abu-Mostafa 的课程有不解之处，可与这门课互相印证。
+
+目前该课程已在 Coursera 下架，何时重开尚属未知。好在网易公开课、Youtube 倒是有全套视频，地址是：http://c.open.163.com/coursera/courseIntro.htm?cid=938 以及 https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf。更多课程资料可从台大官网找到（网页为英语）http://www.csie.ntu.edu.tw/~htlin/mooc/。
+
+彩蛋：台大 2015 年机器学习课程的大纲以及学习资料（PPT）：https://www.csie.ntu.edu.tw/~htlin/course/ml15fall/，可作为补充。顺便提一句，林老师把台大后半学期的课程开成另一门 Coursera 课程“机器学习技巧”，作为进阶。目前 Coursera 也已撤下。网易公开课地址为 http://c.open.163.com/coursera/courseIntro.htm?cid=1664。
+
+5. 谷歌人工智能入门
+
+开发者入门必读：最值得看的十大机器学习公开课
+
+课程名称：人工智能入门  Intro to Artificial Intelligence
+
+主讲人：Peter Norvig，Sebastian Thrun
+
+授课机构：谷歌
+
+发布平台：优达学城 Udacity
+
+语言：英语，汉语字幕
+
+网址：https://cn.udacity.com/course/intro-to-artificial-intelligence--cs271
+
+该课程久享盛名，是 AI 入门最好的公开课之一（雷锋网注：有人认为可以去掉“之一”）。
+
+严格来说，它并不是一门机器学习课程。但其中有一周的主题是机器学习，它还介绍了另外几个 AI 主要领域：概率推理、信息检索、机器人学、自然语言处理等。鉴于学习机器学习的童鞋，几乎都会对 AI 这个大学科有兴趣——这门课程便是探索机器学习周边与交叉领域的绝好机会。
+
+两位主讲者，Peter Norvig 和 Sebastian Thrun，一个是谷歌研究总监，一个是斯坦福著名机器学习教授，均是与吴恩达、Yann Lecun 同级别的顶级 AI 专家。
+
+需要强调的是，该课程倾向于介绍 AI 的实际应用。课程练习广受好评。
+
+6. UBC 本科生的机器学习课程
+
+开发者入门必读：最值得看的十大机器学习公开课
+
+课程名称：面向本科生的机器学习课 Machine Learning for Undergraduates
+
+主讲人： Nando de Freitas
+
+授课机构：英属哥伦比亚大学（UBC）
+
+发布平台：Youtube
+
+语言：英语
+
+网址：https://www.youtube.com/playlist?list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf
+
+Nando de Freitas 是机器学习领域非常杰出的学者。他的这门课很适合作为吴恩达老师“机器学习”的进阶课程，因为：1. “机器学习”省略掉的一些概念，可以在这门课中找到。2. “机器学习”课 不重视数学，而数学是这门课的重点内容。Nando de Freitas 对诸如概率论、log likelihood 等基础数学原理做了很好的讲解，并以此为基础介绍更高级的数学、统计概念。
+
+对于机器学习新手，完全略过数学细节是很危险的，这门课会帮助你打下基础。
+
+但是，它录制于 2012  年，时间也比较久了。因此，雷锋网特意奉上彩蛋一枚。
+
+彩蛋：Nando de Freitas 2013 年转入牛津大学任教。这是他 2014-2015 学年在牛津的全套深度学习课程，包括视频、PPT 以及练习：https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/ （视频保存在 Youtube，需翻墙）。
+
+7. Yann Lecun 深度学习公开课
+
+开发者入门必读：最值得看的十大机器学习公开课
+
+课程名称：深度学习 Deep Learning
+
+主讲人：Yann Lecun
+
+授课机构：法兰西学院
+
+发布平台：法兰西学院官网
+
+语言：法语，英语字幕
+
+网址：https://www.college-de-france.fr/site/en-yann-lecun/course-2016-04-15-11h00.htm
+
+Yann Lecun 在 2016 年初于法兰西学院开课，这是其中关于深度学习的 8 堂课。当时是用法语授课，后来加入了英文字幕。
+
+作为人工智能领域大牛和 Facebook AI 实验室（FAIR）的负责人，Yann Lecun 身处业内机器学习研究的最前沿。他曾经公开表示，现有的一些机器学习公开课内容已经有些过时。通过 Yann Lecun 的课程能了解到近几年深度学习研究的最新进展。该系列可作为探索深度学习的进阶课程。
+
+ 8.  Geoffrey Hinton  深度学习课程
+
+开发者入门必读：最值得看的十大机器学习公开课
+
+课程名称：神经网络用于机器学习 Neural Networks For Machine Learning；网易译名“神经网络的机器学习”
+
+主讲人：Geoffrey Hinton
+
+授课机构：多伦多大学
+
+发布平台：Coursera、网易公开课
+
+语言：英语，汉语字幕
+
+网址：https://www.coursera.org/learn/neural-networks，Coursera；
+
+http://c.open.163.com/coursera/courseIntro.htm?cid=77，网易
+
+深度学习必修课程，讲师为该领域的一代宗师 Geoffrey Hinton。
+
+这门课程聚焦于神经网络和深度学习，是深入了解该领域最好的课程之一（雷锋网注：很多人认为可以去掉“之一”）。
+
+课程官方介绍：
+
+“（你会在这门课）学习人工神经网络以及它们如何应用于机器学习，比方说语音、物体识别，图像分割（image segmentation），建模语言、人体运动等等。我们同时强调基础算法，以及对它们成功应用所需的实用技巧 。”
+
+这门课录制于 2013-2013，时效性上不如 Yann Lecun 的法兰西学院公开课，建议两者结合。另外，它要求微积分、Python 基础，涉及许多专有名词，对初学者难度较大，需自己查找相关资料。
+
+9.  哥伦比亚大学的机器学习公开课
+
+开发者入门必读：最值得看的十大机器学习公开课
+
+课程名称：机器学习 Machine Learning
+
+主讲人：John W. Paisley
+
+授课机构：哥伦比亚大学
+
+发布平台：edX
+
+语言：英语
+
+网址：https://www.edx.org/course/machine-learning-columbiax-csmm-102x
+
+在这份大牛云集的榜单中，该课程的主讲者——哥伦比亚大学副教授 John Paisley，只是一名相对普通的青年学者。但是，这门课程将于两天后，也就是 2017 年 1 月 16 日首次开课。这使它成为时下最新的机器学习入门课程。要知道，近一两年来人工智能和机器学习的发展完全可以用“日新月异”来形容——涌现的新方法、新理论，即便是一流专家也有目不暇接之感。换句换说，三、四年前的课程，可能现在有许多内容已经过时了。
+
+这是 Yann LeCun 提醒大家注意学习资源时效性的原因所在。
+
+可惜许多一流的机器学习公开课，距离录制都有些久了。我们知道一堂公开课背后所耗费的巨大人力。因此，对于部分课程在近两三年并没有更新的事实，倒也不能去怪主讲者和平台。但这使得比较新、时效性较强的课程格外可贵。
+
+这门课中，学习者会了解到机器学习的算法、模型和方法，以及它们在现实生活中的应用。
+
+由于是首次开课，尚没有对该课程的反馈。但鉴于哥伦比亚大学的研究、教学实力，课程品质应当值得期待。
+
+10. MIT 进阶课程
+
+开发者入门必读：最值得看的十大机器学习公开课
+
+课程名称：机器学习 Machine Learning
+
+主讲人：Tommi Jaakkola
+
+授课机构：麻省理工学院（MIT）
+
+发布平台：MIT Opencourseware
+
+语言：英语
+
+网址：https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-867-machine-learning-fall-2006/index.htm
+
+这是一门研究生水平的机器学习课程，难度较高。可惜的是，MIT 并没有提供课程视频，而是以参考书目和课堂笔记的形式，让我们得以一窥该课程的内容。小编认为，这些学习资源的价值仍旧不可估量。因为如此，相比常规公开课，它不会耗费过多时间，非常适合有一定基础的学习者印证自己所学。
+
+小结
+
+这就是雷锋网为您盘点的十大最有价值的机器学习入门公开课。这些课程有浅有深，分别对机器学习不同领域、方面有所侧重。各位童鞋可根据自己所需，自行选择最适合自己的课程。不过，小编必须提醒各位，所有盘点都不可避免得掺杂了主观因素。虽然雷锋网已尽力按照课程质量与业内人士的评价来制定该推荐榜，但自知无法做到十足的公正客观。比方说，该榜单倾向于机器学习的“入门”，而非开发者进阶；倾向于概念、算法学习，而非实战技巧（比如 Python 教程）；倾向于把全世界范围内最好的课程推荐给诸君，而对英语基础较差的学习者照顾不足。榜单之外尚有许多有价值、适应不同层次人士需求的公开课。因此，雷锋网特意列举了几个比较好的系统性机器学习课程以及学习平台，弥补该榜单不足，以供参考。
+
+友情提醒，以下包含收费课程。
+
+系统性课程：
+
+优达学城（Udacity）提供的的 “机器学习工程师”纳米学位，中文字幕，谷歌、滴滴参与授课，收费。
+
+https://cn.udacity.com/course/machine-learning-engineer-nanodegree--nd009
+
+华盛顿大学的“机器学习专业”系列课程，Coursera 平台，收费，共六门课。
+
+https://www.coursera.org/specializations/machine-learning
+
+约翰·霍普金斯大学的“数据科学专业”系列课程，Coursera 平台，收费，共十门课。
+
+https://www.coursera.org/specializations/jhu-data-science
+
+密歇根大学的“Python 的应用数据科学专业”系列课程，Coursera 平台，收费，共五门课。适合需要学习 Python 实战技巧的机器学习开发者。
+
+https://www.coursera.org/specializations/data-science-python
+
+平台推荐：
+
+国外的 Coursera、edX、优达学城（Udacity）、Udemy；国内的网易公开课、七月在线都集中了相对优质的学习资源。当然，英语不错的童鞋推荐国外学习网站，尤其它们的问答论坛非常有帮助。
+
+对于英语基础不是那么好的童鞋，Coursera 和优达学城很重视中国市场，它们的大部分机器学习资源都添加了汉语字幕。对于 edX 和可汗学院的部分课程，网易公开课有字幕翻译。
+
+对于需要在数学、统计方面补课的童鞋，除了以上几个平台之外，强烈推荐可汗学院 Khan Academy， 它的数学课非常有名，连比尔·盖茨都推荐给他子女，很适合从零起步打基础。
+
+另外，雷锋网旗下 “AI 科技评论”会定期举办“硬创公开课”，邀请业内专家对机器学习热点问题进行深度讨论，并问答 AI 科技评论读者的问题 。上期，我们就请来新加坡国立大学的冯佳时教授剖析了 GANs （生成对抗网络）。更多信息请关注 AI 科技评论微信公众号。
+
+
+
+
+机器学习进阶路上不可错过的 28 个视频
+http://blog.csdn.net/zhujianing1993/article/details/60639652
+
+
+
+
+书
+http://www.7guzhen.com/769fitc620170430c6n491289849.html
+
+5本深度学习书籍资源推荐
+
+深度学习（Deep Learning）byIan Goodfellow and Yoshua Bengio and Aaron Courville
+
+R语言深度学习实践指南（Deep Learning Made Easy with R）by Dr. N.D. Lewis
+
+深度学习基础（Fundamentals of Deep Learning）by Nikhil Buduma
+神经网络和统计学习（Neural networks and statistical learning） by K.-L. Du and M.N.s. Swamy
+
+神经网络和深度学习（Neural Networks and Deep Learning） by Michael Niels
+
+　　10本机器学习书籍资源推荐
+
+机器学习、神经网络和统计分类（Machine Learning, Neural Networks, and Statistical Classification）by
+
+　　D. Michie, D.J. Spiegelhalter, C.C. Taylor
+
+　　http://www1.maths.leeds.ac.uk/~charles/statlog/
+
+贝叶斯推理和机器学习（Bayesian Reasoning and Machine Learning）by David Barber
+
+　　http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.Online
+
+机器学习的高斯过程（Gaussian Processes for Machine Learning） by Carl Edward Rasmussen and Christopher K. I. Williams，The MIT Press
+
+　　http://www.gaussianprocess.org/gpml/
+
+信息理论、推理和学习算法（Information Theory, Inference, and Learning Algorithms） by David J.C. MacKay
+
+　　http://www.inference.phy.cam.ac.uk/mackay/itprnn/book.html
+
+统计学习元素（The Elements of Statistical Learning）by Trevor Hastie, Robert Tibshirani, Jerome Friedman
+
+　　http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf
+
+机器学习课程（A Course in Machine Learning）by Hal Daumé III
+
+　　http://ciml.info/
+
+机器学习导论（Introduction to Machine Learning）by Amnon Shashua，Cornell University
+
+　　https://arxiv.org/abs/0904.3664v1
+
+强化学习（Reinforcement Learning）
+
+　　https://www.intechopen.com/books/reinforcement_learning
+
+机器学习导论（Introduction to Machine Learning）- By Nils Nilsson
+
+　　http://ai.stanford.edu/~nilsson/mlbook.html
+
+强化学习（Reinforcement Learning）- MIT Press
+
+　　http://webdocs.cs.ualberta.ca/~sutton/book/the-book.html
+  
+https://github.com/darksigma/Fundamentals-of-Deep-Learning-Book
+
+paper read group
+https://hustcv.github.io/
+
+github
+yuanliangding
+frankstar007
+ljalphabeta
+trello.com
