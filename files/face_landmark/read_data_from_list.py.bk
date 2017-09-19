@@ -1,0 +1,208 @@
+import os,sys
+import numpy as np
+import cv2
+
+
+class FaceLandmarkDataReader():
+    def __init__(self):
+        self.list_path = ""
+        self.pts_num = 68
+        self.input_image_W = 40
+        self.input_image_H = 40
+        self.input_image_C = 3
+        self.path_prex = ""
+        self.batch_size = 64
+
+
+    ## read data from list
+    ## 300-W_GT_fixFD_20140622.txt
+    """
+    helen\testset\296814969_3.jpg 300 267 269 269 
+    266.000 
+    ...
+    """
+    ## read list
+    # return X img_path
+    # return Y x,y,w,h, 68 pts
+    def read_list(self):
+
+        X_lst = []
+        Y_Face_list = []
+        Y_Land_lst = []
+
+        if not os.path.exists(self.list_path):
+            raise ValueError('list_path of ' + self.list_path + ' not exists!')
+
+        for line in open(self.list_path):
+            line = line.strip()
+            elems = line.split(' ')
+            assert len(elems) == (self.pts_num*2+1+4)
+            X_lst.append(elems[0])
+
+            face_coord = []
+            print(line)
+            for i in [1,2,3,4]:
+                print(elems[i])
+                face_coord.append( int(elems[i]) )
+            Y_Face_list.append(face_coord)
+
+            face_landmark = []
+            for i in range(self.pts_num*2):
+                face_landmark.append(float(elems[i+5]))
+            Y_Land_lst.append(face_landmark)
+
+        return (X_lst, Y_Face_list, Y_Land_lst)
+
+    # read_list all line for debug
+    def read_lst_all_lines(self):
+        if not os.path.exists(self.list_path):
+            raise ValueError('list_path of ' + self.list_path + ' not exists!')
+
+        lst = []
+        for line in open(self.list_path):
+            line = line.strip()
+            lst.append(line)
+
+        return lst
+
+    def read_data_from_list(self):
+
+        (X_lst, Y_Face_lst, Y_Land_lst) = self.read_list()
+
+        X = np.zeros( [0, self.input_image_H, self.input_image_W, self.input_image_C] )
+        Y = np.zeros( [0, self.pts_num*2] )
+
+        for i in range( len(X_lst) ):
+            img_path0 = X_lst[i]
+            img_path = self.path_prex + img_path0
+
+            if not os.path.exists(img_path):
+                raise ValueError(img_path + " not exists")
+
+            img = cv2.imread(img_path)
+            x,y,w,h = Y_Face_lst[i]
+            face = img[ y:y+h, x:x+w ]
+            face_sz = cv2.resize(face, (self.input_image_H, self.input_image_W), 0, 0, cv2.INTER_LINEAR)
+            face_path = './tmp/face_{:04d}_{:04d}.jpg'.format(0, i)
+            cv2.imwrite(face_path, face_sz)
+            face_sz = face_sz/127.0 - 1.0
+            X = np.row_stack( (X, face_sz[np.newaxis, :]) )
+
+            Y_Land = np.array(Y_Land_lst[i])
+            Y = np.row_stack( (Y, Y_Land[np.newaxis, :]) )
+
+        return (X,Y)
+
+
+    # read batch data
+    def read_batch(self):
+
+        all_lines = self.read_lst_all_lines()
+        (X_lst, Y_Face_lst, Y_Land_lst) = self.read_list()
+
+        X = np.zeros([0, self.input_image_H, self.input_image_W, self.input_image_C])
+        Y = np.zeros([0, self.pts_num * 2])
+
+        all_len = len(X_lst)
+        assert self.batch_size > 0
+        batch_num = int(all_len // self.batch_size)
+        batch_idx = 0
+        while True:
+            # read batch data
+            for i in range(self.batch_size):
+                idx = batch_idx * self.batch_size + i
+                img_path0 = X_lst[idx]
+                #print(all_lines[idx])
+                img_path = self.path_prex + img_path0
+
+                if not os.path.exists(img_path):
+                    raise ValueError(img_path + " not exists")
+
+                img = cv2.imread(img_path)
+                if img == None:
+                    raise ValueError("img is None path:" + img_path)
+
+                x, y, w, h = Y_Face_lst[i]
+                face = img[x:x + w, y:y + h]
+                #print(img_path)
+                #print(x,y,w,h)
+                #print(face.shape)
+                if face == None:
+                    raise ValueError("face is None path:" + img_path)
+                face_sz = cv2.resize(face, dsize=(self.input_image_H, self.input_image_W), fx=0, fy=0, interpolation=cv2.INTER_LINEAR)
+                face_path = './tmp/face_{:04d}_{:04d}.jpg'.format(batch_idx, i)
+                print(face_path)
+                cv2.imwrite(face_path, face_sz)
+                face_sz = face_sz / 127.0 - 1.0
+                X = np.row_stack((X, face_sz[np.newaxis, :]))
+
+                Y_Land = np.array(Y_Land_lst[i])
+                Y = np.row_stack((Y, Y_Land[np.newaxis, :]))
+
+            yield (X,Y)
+            batch_idx += 1
+            if batch_idx == batch_num:
+                batch_idx = 0
+
+        pass
+
+
+    # read batch data
+    def read_batch_list(self):
+
+        all_lines = self.read_lst_all_lines()
+        (X_lst, Y_Face_lst, Y_Land_lst) = self.read_list()
+
+        X_img_path = []
+        X_face_coord = np.zeros([0, 4], dtype=np.int)
+        Y = np.zeros([0, self.pts_num * 2])
+
+        all_len = len(X_lst)
+        assert self.batch_size > 0
+        batch_num = int(all_len // self.batch_size)
+        batch_idx = 0
+        while True:
+            # read batch data
+            for i in range(self.batch_size):
+                idx = batch_idx * self.batch_size + i
+                img_path0 = X_lst[idx]
+                print(all_lines[idx])
+                img_path = self.path_prex + img_path0
+
+                if not os.path.exists(img_path):
+                    raise ValueError(img_path + " not exists")
+
+                X_img_path.append(img_path)
+                X_face_coord = np.row_stack( (X_face_coord, np.array(Y_Face_lst[i], dtype=np.int)) )
+                Y_Land = np.array(Y_Land_lst[i])
+                Y = np.row_stack((Y, Y_Land[np.newaxis, :]))
+
+
+            yield (X_img_path, X_face_coord, Y)
+
+            batch_idx += 1
+            if batch_idx == batch_num:
+                batch_idx = 0
+
+
+
+
+if __name__ == "__main__":
+    print('test')
+    face_read = FaceLandmarkDataReader()
+    face_read.path_prex = "D:/FaceLandmark/dataset/Data/300W_train_3837/"
+    face_read.list_path = "D:/FaceLandmark/dataset/Data/" + "300-W_GT_fixFD_20140622.txt"
+    face_read.batch_size = 64
+
+    (batch_X, batch_Y) = face_read.read_data_from_list()
+    print(batch_X.shape)
+    print(batch_Y.shape)
+
+
+    #print( type(face_read.read_batch_list) )
+    #r = face_read.read_batch_list.next()
+    #print(r.shape)
+    #(batch_X_img, batch_X_face, batch_Y) = r
+    #print(batch_X_img.shape)
+    #print(batch_X_face.shape)
+    #print(batch_Y.shape)
